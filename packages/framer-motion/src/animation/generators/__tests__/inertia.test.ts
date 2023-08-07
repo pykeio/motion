@@ -23,6 +23,18 @@ describe("inertia", () => {
         expect(keyframes).toEqual(expectedAnimationKeyframes)
     })
 
+    test("Continues animation when time is 0", () => {
+        const generator = inertia({
+            keyframes: [100],
+            min: 0,
+            max: 0,
+        })
+
+        const state = generator.next(0)
+        expect(state.done).toEqual(false)
+        expect(state.value).toEqual(100)
+    })
+
     test("modifyTarget changes calculated target", () => {
         const generator = inertia({
             keyframes: [100],
