@@ -4,6 +4,27 @@ Framer Motion adheres to [Semantic Versioning](http://semver.org/).
 
 Undocumented APIs should be considered internal and may change without warning.
 
+## [10.16.4] 2023-05-09
+
+### Fixed
+
+-   Changed handoff `startTime` source from `performance.now()` to `document.timeline.currentTime`.
+
+## [10.16.3] 2023-04-09
+
+### Fixed
+
+-   Improved compatibility of custom `RefObject` and `MutableRefObject` types.
+-   Fixing `useScroll` dependencies array.
+-   Fixing optimised handoff to WAAPI animations.
+
+## [10.16.2] 2023-08-30
+
+### Fixed
+
+-   Improved performance of frameloop scheduling.
+-   Fixed crasher when using SVGs as scroll animation targets.
+
 ## [10.16.1] 2023-08-21
 
 ### Fixed
